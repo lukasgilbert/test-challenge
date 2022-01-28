@@ -1,69 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
 <head>
-<title>Meine erste Seite</title>
-<meta charset="utf-8" />
-<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta charset="UTF-8">
 
-<!-- Usercentrics Implementation -->  
-<script id="usercentrics-cmp" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="do73xecqD" async></script>  
-<!-- End Usercentrics Implementation -->
-  
-<!-- Google Tag Manager -->
+<script id="usercentrics-cmp" data-language="eng" src="https://app.usercentrics.eu/browser-ui/latest/loader.js" data-settings-id="nI2ELSyoJ" async></script>
+
+  <!-- Google Analytics -->
 <script type="text/plain" data-usercentrics="Google Analytics">
-(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-PZSRWZQ');</script>
-<!-- End Google Tag Manager -->   
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-183902004-1', 'auto');
+ga('send', 'pageview');
+</script>
+<!-- End Google Analytics -->
   
+  
+  <script>
+  window.addEventListener("ucEvent", function (e) {    
+    if( e.detail && e.detail.event == "consent_status") {
+        // check for consent status of service "Google Ads Remarketing"
+        if(e.detail['Google Analytics'] === true) {
+          console.log('Google Analytics has consent');
+        }
+        else {
+          console.log('Google Analytics has no consent');
+        }
+    }
+});
+
+  </script>
+
+  
+
 </head>
 <body>
-
-  <iframe align="right" width="560" height="315" src="https://www.youtube.com/embed/DrDm7uO4Fu0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-  <h1>Hello World!</h1>
-  <h2>A few facts about the world we live in</h2>
-  
-  <p>Earth is the third planet from the Sun and is the largest of the terrestrial planets. Unlike the other planets in the solar system that are named after classic deities the Earth's name comes from the Anglo-Saxon word erda which means ground or soil. The Earth was formed approximately 4.54 billion years ago and is the only known planet to support life.</p>
-  
-  <hr/>
-  
-  <h3>About the earth</h3>
-  <ul>
-    <li><b>Mass:</b> 5.972.190.000.000.000 billion kg</li>
-    <li><b>Diameter at quator:</b> 12.756 km</li>
-    <li><b>Satellites:</b> <a href="https://space-facts.com/the-moon/">The Moon</a></li>
-  </ul>
-  
-  <hr/>
-  
-  <h3>Top 3 earth facts</h3>
-  <ol>
-    <li>The Earth's rotation is gradually slowing</li>
-    <li>A year isn't exactly 365 days, and the earth doesn't take 24 hours to rotate</li>
-    <li>70% of the earth's surface is water, and only the third of its fresh water is unfrozen</li>
-  </ol>
-  
-  <hr/>
-  
-  <table>
-    <tr><th>Name</th><th>Radius</th><th>Average Temperature</th></tr>
-    <tr><td>Mars</td><td>3.390 km</td><td>-55° C</td></tr>
-    <tr><td>Venus</td><td>6.052 km</td><td>460° C</td></tr>
-  </table>
-  
-  <hr/>
-  
-  <p>Want to know more?</p>
-  
-  <!-- Link als action in die Form, nicht als a tag mit href in den Input! -->
-  
-  <form action="https://space-facts.com/earth/?">
-    <input type="submit" value="Click Here!"/>
-  </form>
+  <h1>This is a Test Website for the Usercentrics CSM Challenge</h1>
   
 </body>
 </html>
