@@ -27,13 +27,14 @@ ga('send', 'pageview');
         }
         else {
           console.log('Google Analytics has no consent');
-        }
+          window.addEventListener("UC_UI_INITIALIZED", function (e) {    
+          UC_UI.updateLanguage("de");  
+          });
+      }
     }
 });
-
   </script>
 
-  
 
 </head>
 <body>
